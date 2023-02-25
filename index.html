@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animaciones.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--library iconos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--google fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+    <title>CV</title>
+</head>
+<body>
+
+     <!-- La Modal/Lightbox, puesto acá para que se superponga -->
+     <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">  
+            <div class="mySlides">
+                <div class="numbertext">1 / 12</div>
+                <img class="imgslide" src="img/fashion1.jpg">             
+            </div>  
+            <div class="mySlides">
+                <div class="numbertext">2 / 12</div>
+                <img class="imgslide" src="img/product2.jpg">
+            </div>  
+            <div class="mySlides">
+                <div class="numbertext">3 / 12</div>
+                <img class="imgslide" src="img/wedding2.jpg">
+            </div>  
+            <div class="mySlides">
+                <div class="numbertext">4 / 12</div>
+                <img class="imgslide" src="img/landscape2.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 12</div>
+                <img class="imgslide" src="img/product1.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 12</div>
+                <img class="imgslide" src="img/fashion4.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 12</div>
+                <img class="imgslide" src="img/landscape1.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 12</div>
+                <img class="imgslide" src="img/fashion3.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">9 / 12</div>
+                <img class="imgslide" src="img/wedding1.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">10 / 12</div>
+                <img class="imgslide" src="img/landscape3.jpg">
+            </div> 
+            <div class="mySlides">
+                <div class="numbertext">11 / 12</div>
+                <img class="imgslide" src="img/fashion2.jpg">
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">12 / 12</div>
+                <img class="imgslide" src="img/product3.jpg">
+            </div>
+            <!-- Next/previous controls -->  
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>                       
+        </div>
+    </div> 
+    
+    <div class="header"></div>
+    <!--el menu/close-->    
+    <div class="container1">        
+        <button class="acordeon">
+            <div class="container" id="menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>                
+            </div>
+        </button>
+        <!-- la sidebar -->
+        <ul class="sidebar">
+            <li><a href="#about" class="cardlinks" onmouseup="openCard(event, 'about')"><i class="fa fa-fw fa-solid fa-user"></i><h4>SobreMi</h4></a></li>
+            <li><a href="#resume" class="cardlinks" onmouseup="openCard(event, 'resume')"><i class="fa fa-fw fa-solid fa-rectangle-list"></i><h4>MiExperiencia</h4></a></li>
+            <li><a href="#portfolio" class="cardlinks" onmouseup="openCard(event, 'portfolio')"><i class="fa fa-fw fa-solid fa-camera-retro"></i><h4>MisTrabajos</h4></a></li>
+            <li><a href="#contact" class="cardlinks" onmouseup="openCard(event, 'contact')"><i class="fa fa-fw fa-solid fa-envelope"></i><h4>Contactame</h4></a></li>
+        </div>        
+    </div>
+    <!--main body y cards-->
+    <div class="container2">
+        <div class="card1">
+            <img src="/img/perfil.jpg" alt="Imagen de perfil" style="width:100%">
+            <div class="cardcontainer">
+                <h2>Aymara Razo Romero</h2>
+                <h3>Fotografa</h3>
+            </div>
+        </div>
+    </div> 
+    
+    <!--resume-->
+    <div class="container2">
+        <div class="card2" id="resume">
+            <div class="cardcontainer">
+                <!-- title -->
+                <div class="title" style="text-align: center;"><span class="first-word">Mi</span>Experiencia</div>             
+                <!-- content -->              
+                <div class="scroll-container">
+                    <div id="grid">
+                        <!-- Experience -->
+                        <div class="resume-box" style="grid-column: 1 / 3;">                        
+                            <div class="resume-title">
+                                <div class="icon"><i class="fa fa-briefcase"></i></div>
+                                <div class="name">Experiencia</div>
+                            </div>
+                            <div class="resume-items">
+                                <div class="resume-item">
+                                    <div class="date">2013 - actualidad</div>
+                                    <div class="name">Directora de fotografía</div>
+                                    <div class="company">Warner Bros</div>
+                                    <div class="p1">Colaboración con los equipos creativos</div>
+                                </div>
+                                <div class="resume-item">
+                                    <div class="date">2010 - 2013</div>
+                                    <div class="name">Fotografa</div>
+                                    <div class="company">Shoot</div>
+                                    <div class="p1">Fotografía en locación con equipos analógicos y digitales</div>
+                                </div>                                
+                            </div>
+                        </div>    
+                        <!-- Education -->
+                        <div class="resume-box" style="grid-column: 3 / 5;">
+                            <div class="resume-title">
+                                <div class="icon"><i class="fa fa-university"></i></div>
+                                <div class="name">Educación</div>
+                            </div>
+                            <div class="resume-items">
+                                <div class="resume-item">
+                                    <div class="date">2015 - 2019</div>
+                                    <div class="name">Fotografía</div>
+                                    <div class="company">UNSAM</div>
+                                    <div class="p1">Título obtenido: Licenciada en Fotografía</div>
+                                </div>
+                                <div class="resume-item">
+                                    <div class="date">2013 - 2015</div>
+                                    <div class="name">Diseño gráfico</div>
+                                    <div class="company">Escuela Da Vinci</div>
+                                    <div class="p1">Título Oficial: Diseñadora Gráfico Artístico Digital</div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!--Skills-->
+                        <div class="text-box" style="grid-column: 1 / 5;">
+                            <div class="title"><span class="first-word">Mis</span>Habilidades</div>
+                        </div>
+                        <!--Design-->
+                        <div class="resume-box" style="grid-column: 1 / 3;">
+                            <div class="skill-title">
+                                <div class="icon"><i class="fa fa-paint-brush"></i></div>
+                                <div class="name">Software</div>
+                            </div>
+                            <div class="barcontainer">
+                                <div class="skills">
+                                    <h2>Adobe Photoshop</h2>
+                                    <div class="progress-bar">
+                                        <div class="photoshop"><span>93%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barcontainer">
+                                <div class="skills">
+                                    <h2>Adobe Lightroom</h2>
+                                    <div class="progress-bar">
+                                        <div class="lightroom"><span>85%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barcontainer">
+                                <div class="skills">
+                                    <h2>Adobe Illustrator</h2>
+                                    <div class="progress-bar">
+                                        <div class="illustrator"><span>75%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="barcontainer">
+                                <div class="skills">
+                                    <h2>DxO Photolab</h2>
+                                    <div class="progress-bar">
+                                        <div class="dxo"><span>65%</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                                                           
+                            <!--Languages-->
+                            
+                            <div class="resume-box" style="grid-column: 3 / 5;">
+                                <div class="skill-title">
+                                    <div class="icon"><i class="fa fa-flag"></i></div>
+                                    <div class="name">Idiomas</div>
+                                </div>                            
+                                <div class="text-box">
+                                    <div class=langskill>
+                                        <div class="outer">
+                                            <div class="inner"><span class="lang">ESPAÑOL</span>
+                                                <div id="number1"></div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px">
+                                            <defs>
+                                                <linearGradient id="GradientColor" gradientTransform="rotate(90)">
+                                                    <stop offset="0%" stop-color="#ffc0cb" />
+                                                    <stop offset="100%" stop-color="#a0a0a0" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle class="circle1" cx="50" cy="50" r="45" stroke-linecap="round" />
+                                        </svg>
+                                    </div>                               
+                                </div>
+                                <div class="text-box">
+                                    <div class=langskill>
+                                        <div class="outer">
+                                            <div class="inner"><span class="lang">INGLÉS</span>
+                                                <div id="number2"></div>
+                                            </div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px">
+                                            <defs>
+                                                <linearGradient id="GradientColor" gradientTransform="rotate(90)">
+                                                    <stop offset="0%" stop-color="#ffc0cb" />
+                                                    <stop offset="100%" stop-color="#a0a0a0" />
+                                                </linearGradient>
+                                            </defs>
+                                            <circle class="circle2" cx="50" cy="50" r="45" stroke-linecap="round" />
+                                        </svg>
+                                    </div>                               
+                                </div>
+                                                                    
+                            </div>
+                            
+                            <!--Film maker-->
+                            <div class="resume-box" style="grid-column: 1 / 3;">
+                                <div class="skill-title">
+                                    <div class="icon"><i class="fa-solid fa-video"></i></div>
+                                    <div class="name">Film maker</div>
+                                </div>
+                                <div class="barcontainer">
+                                    <div class="skills">
+                                        <h2>Sony Vegas</h2>
+                                        <div class="progress-bar">
+                                            <div class="vegas"><span>68%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="barcontainer">
+                                    <div class="skills">
+                                        <h2>Adobe After Effects</h2>
+                                        <div class="progress-bar">
+                                            <div class="afterfx"><span>59%</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="barcontainer">
+                                    <div class="skills">
+                                        <h2>Adobe Premiere</h2>
+                                        <div class="progress-bar">
+                                            <div class="premiere"><span>88%</span></div>
+                                        </div>
+                                    </div>
+                                </div>                                
+                            </div>                   
+                            <!--Extras-->
+                            <div class="resume-box" style="grid-column: 3 / 5;">
+                                <div class="skill-title">
+                                    <div class="icon"><i class="fa-solid fa-clipboard"></i></div>
+                                    <div class="name">Extras</div> 
+                                </div>   
+                                <div class="skill-list">
+                                    <ul>
+                                        <li>
+                                            <div class="name">Diseño gráfico</div>
+                                        </li>
+                                        <li>
+                                            <div class="name">Gigantografías</div>
+                                        </li>
+                                        <li>
+                                            <div class="name">Render 3D</div>
+                                        </li>
+                                        <li>
+                                            <div class="name">Animaciones</div>
+                                        </li>                                        
+                                    </ul>
+                                </div>                        
+                            </div>
+                        </div> 
+                        <!-- Testimonial -->                        
+                        <!-- title 
+                        <div class="title" style="grid-column: 1 / span 4;"><span class="first-word">T</span>estimonio</div>-->
+                        <!-- content                           
+                        <div class="resume-box" style="grid-column: 1 / span 4;">
+                            <div class="revs-item">
+                                <div class="text">
+                                    <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.							
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <div class="img">
+                                        <img src="https://www.fakepersongenerator.com/Face/female/female1023032615692.jpg" alt="Ilene G Bunyard">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Ilene G Bunyard</div>
+                                        <div class="prof">Modelo</div>
+                                    </div>
+                                <div class="clear"></div>
+                            </div>               
+                        </div> --> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+         
+    <!--portfolio-->
+    <!--content-->
+    <div class="container2">
+        <div class="card2" id="portfolio">
+            <div class="cardcontainer">
+                <!-- title -->
+                <div class="title" style="text-align: center;"><span class="first-word">Mis</span>Trabajos</div>
+                <!-- content -->
+                <div class="scroll-container">
+                    <div id="grid2">
+                        <!-- photos --> 
+                        <img class="portfotos" src="img/fashion1.jpg" onclick="openModal();currentSlide(1)">                                                                                
+                        <img class="portfotos" src="img/product2.jpg" onclick="openModal();currentSlide(2)">                            
+                        <img class="portfotos" src="img/wedding2.jpg" onclick="openModal();currentSlide(3)">
+                        <img class="portfotos" src="img/landscape2.jpg" onclick="openModal();currentSlide(4)">                                                                                
+                        <img class="portfotos" src="img/product1.jpg" onclick="openModal();currentSlide(5)">
+                        <img class="portfotos" src="img/fashion4.jpg" onclick="openModal();currentSlide(6)">
+                        <img class="portfotos" src="img/landscape1.jpg" onclick="openModal();currentSlide(7)">                     
+                        <img class="portfotos" src="img/fashion3.jpg" onclick="openModal();currentSlide(8)">
+                        <img class="portfotos" src="img/wedding1.jpg" onclick="openModal();currentSlide(9)">
+                        <img class="portfotos" src="img/landscape3.jpg" onclick="openModal();currentSlide(10)">
+                        <img class="portfotos" src="img/fashion2.jpg" onclick="openModal();currentSlide(11)">                    
+                        <img class="portfotos" src="img/product3.jpg" onclick="openModal();currentSlide(12)">                                                                                                      
+                    </div>    
+                </div>        
+            </div>            
+        </div>
+    </div>
+    <!--contact-->
+    <div class="container2">
+        <div class="card2" id="contact">
+            <div class="cardcontainer">
+                <!-- title -->
+                <div class="title" style="text-align: center;"><span class="first-word">C</span>ontáctame</div>
+                <div class="scroll-container">                    
+                    <!-- content -->
+                    <div class="row">                        
+                        <form action="/action_page.php" target="_blank" method="post" autocomplete="on">  <!-- CAMBIAR ACTION / INSERTAR DESTINO -->                          
+                            <div class="column">
+                                <label for="fname"><h2>Nombre</h2></label>
+                                <input type="text" id="fname" name="firstname" placeholder="Tu nombre..." required><br>                           
+                                <label for="email"><h2>Dirección de E-mail</h2></label>
+                                <input type="email" id="email" name="e-mail" placeholder="Tu e-Mail..." required><br>
+                            </div>
+                            <div class="column">
+                                <label for="lname"><h2>Apellido</h2></label>
+                                <input type="text" id="lname" name="lastname" placeholder="Tu apellido..." required><br>
+                                <label for="tel"><h2>Teléfono celular/fijo</h2></label>
+                                <input type="tel" id="tel" name="telefono" placeholder="Tu teléfono..." required><br>
+                            </div>
+                            <div class="column2">
+                                <label for="subject"><h2>Mensaje de contacto</h2></label>
+                                <textarea id="subject" name="mensaje" placeholder="Ingrese su mensaje aquí..." required></textarea><br>
+                            </div>
+                            <div class="column2">
+                                <input type="submit" value="Enviar"><br> 
+                            </div>
+                        </form>                             
+                        <div class="column">
+                            <div class="info-list">
+                                <ul>
+                                    <li><strong>Teléfono....</strong>+54-911-1234-5678</li>
+                                    <li><strong>E-mail....</strong>aymaraph@razophotos.com</li>                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="info-list">
+                                <ul>
+                                    <li><strong>Dirección....</strong>Calle Falsa 123</li>                                    
+                                    <li><strong>Ubicación....</strong>C.A.B.A., ARG</li>
+                                </ul>
+                            </div>
+                        </div> 
+                        <div class="column2">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3048.0834618597637!2d-4.45816!3d40.184956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4035b57551b6f3%3A0x84be095154d712f6!2sC.%20Falsa%2C%2045908%20Aldea%20en%20Cabo%2C%20Toledo%2C%20Espa%C3%B1a!5e0!3m2!1ses-419!2sar!4v1676833684109!5m2!1ses-419!2sar" width="100%" height="300px" style="border:0;" allowfullscreen="on" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>                    
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--about-->
+    <div class="container2">
+        <div class="card2" id="about">
+            <div class="cardcontainer">
+                <!-- title -->
+                <div class="title" style="text-align: center;"><span class="first-word">Sobre</span>Mi
+                </div>                
+                <div class="scroll-container">
+                    <div id="grid">
+                        <!-- content -->
+                        <div class="text-box" style="grid-column: 1 / 3;">
+                            <p>Soy Aymara Razo Romero, fotógrafa de Argentina. Cuento con 15 años de experiencia en fotografía de moda y eventos sociales. Además tengo múltiples trabajos de edición de video con excelentes resultados. Me gustaría que hablemos sobre el futuro proyecto único que podemos hacer.</p>
+                        </div>
+                        <div class="text-box" style="grid-column: 3 / 5;">
+                            <div class="info-list">
+                                <ul>
+                                    <li><strong>Edad....</strong>35</li>
+                                    <li><strong>Residencia....</strong>Argentina</li>
+                                    <li><strong>Freelance....</strong>Disponible</li>
+                                    <li><strong>Dirección....</strong>C.A.B.A., ARG</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Services-->
+                                                                   
+                        <!-- title -->
+                        <div class="title" style="grid-column: 1 / 5;"><span class="first-word">Mis</span>Servicios
+                        </div>            
+                        <!-- service item -->
+                        <div class="text-box" style="grid-column: 1 / 3;">                            
+                            <div class="service-item">
+                                <div class="icon">
+                                    <span class="fa-solid fa-shirt"></span>
+                                </div>
+                                <div class="name">
+                                    <span>
+                                        Moda								</span>
+                                </div>
+                                <div class="desc">
+                                    <div>
+                                    <p>Fotografías relacionadas a la moda para mostrar tu trabajo profesionalmente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <!-- service item -->
+                        <div class="text-box" style="grid-column: 3 / 5;">        
+                            <div class="service-item">
+                                <div class="icon">
+                                    <span class="fa-solid fa-cake-candles"></span>
+                                </div>
+                                <div class="name">
+                                    <span>
+                                    Eventos								</span>
+                                </div>
+                                <div class="desc">
+                                    <div>
+                                        <p>Cobertura de eventos sociales como fiestas, cumpleaños, eventos de compañías y más.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- service item -->
+                        <div class="text-box" style="grid-column: 1 / 3;">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <span class="fa-solid fa-user-large"></span>
+                                </div>
+                                <div class="name">
+                                    <span>
+                                        Retratos								</span>
+                                </div>
+                                <div class="desc">
+                                    <div>
+                                        <p>Ideales para mostrarse en redes, para posters, banners y lo que se desee.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                        <!-- service item -->
+                        <div class="text-box" style="grid-column: 3 / 5;">
+                            <div class="service-item">
+                                <div class="icon">
+                                    <span class="fa-solid fa-mountain-sun"></span>
+                                </div>
+                                <div class="name">
+                                    <span>
+                                    Paisajes								</span>
+                                </div>
+                                <div class="desc">
+                                    <div>
+                                        <p>Perfectos para mostrar turísticamente los lugares.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                               
+                        <!--Price Tables-->
+                        
+                        <!-- title -->
+                        <div class="title" style="grid-column: 1 / 3;"><span class="first-word" >P</span>recios
+                        </div>                                       
+                        <!-- pricing item -->
+                        <div class="text-box" style="grid-column: 1 / 3;">
+                            <div class="pricing-item">
+                                <div class="icon"><i class="fa fa-battery-half"></i></div>
+                                <div class="name">Básico</div>
+                                <div class="amount">
+                                    <span class="dollar">$</span>
+                                    <span class="number">22</span>
+                                    <span class="period">hora</span>
+                                </div>
+                                <div class="feature-list">
+                                    <ul>
+                                        <li>Eventos</li>
+                                        <li>Retratos</li>
+                                        <li class="disable">Moda</li>
+                                        <li class="disable">Paisajes <strong>new</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="lnks">
+                                    <a href="#" class="lnk">
+                                    <span class="text">Comprar básico</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>            
+                        <!-- pricing item -->
+                        <div class="text-box" style="grid-column: 3 / 5;">
+                            <div class="pricing-item">
+                                <div class="icon"><i class="fa fa-battery-full"></i></div>
+                                <div class="name">Pro</div>
+                                <div class="amount">
+                                    <span class="dollar">$</span>
+                                    <span class="number">48</span>
+                                    <span class="period">hora</span>
+                                </div>
+                                <div class="feature-list">
+                                    <ul>
+                                        <li>Eventos</li>
+                                        <li>Retratos</li>                                        
+                                        <li>Moda</li>
+                                        <li>Paisajes <strong>new</strong></li>
+                                    </ul>
+                                </div>
+                                <div class="lnks">
+                                    <a href="#" class="lnk">
+                                    <span class="text">Comprar pro</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        
+                        <!--Fun Fact-->                                    
+                        <!-- title -->
+                        <div class="title" style="grid-column: 1 / 5;"><span class="first-word">Datos</span> divertidos</div>                                        
+                        <!-- fuct item -->
+                        <div class="text-box" style="grid-column: 1;">
+                            <div class="fuct-item">
+                                <div class="icon"><span class="fa-solid fa-camera-retro"></span></div>
+                                <div class="name">80 campañas de moda</div>
+                            </div>
+                        </div>
+                        <!-- fuct item -->
+                        <div class="text-box" style="grid-column: 2;">
+                            <div class="fuct-item">
+                                <div class="icon"><span class="fa fa-trophy"></span></div>
+                                <div class="name">15 premios ganados</div>
+                            </div>
+                        </div>
+                        <!-- fuct item -->
+                        <div class="text-box" style="grid-column: 3;">
+                            <div class="fuct-item">
+                                <div class="icon"><span class="fa fa-coffee"></span></div>
+                                <div class="name">1 000 tazas de café bebidas</div>
+                            </div>
+                        </div>
+                        <!-- fuct item -->
+                        <div class="text-box" style="grid-column: 4;">
+                            <div class="fuct-item">
+                                <div class="icon"><span class="fa fa-flag"></span></div>
+                                <div class="name">10 paises visitados</div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                                      
+                        <!--Clients-->                        
+                        <!-- title -->
+                        <div class="title" style="grid-column: 1 / 5;"><span class="first-word">C</span>lientes</div>
+                        <!-- content -->                            
+                        <!-- client item -->
+                        <div class="text-box" style="grid-column: 1;">
+                            <div class="client-item">
+                                <div class="image">
+                                    <a target="_blank" href="https://www.chanel.com/lx/">
+                                    <img src="img/chanel.png" alt="Chanel">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- client item -->
+                        <div class="text-box" style="grid-column: 2;">
+                            <div class="client-item">
+                                <div class="image">
+                                    <a target="_blank" href="https://www.armani.com/es-ar">
+                                    <img src="img/armani.png" alt="Griogio Armani">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- client item -->
+                        <div class="text-box" style="grid-column: 3;">
+                            <div class="client-item">
+                                <div class="image">
+                                    <a target="_blank" href="https://www.gucci.com">
+                                    <img src="img/gucci.png" alt="Gucci">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- client item -->
+                        <div class="text-box" style="grid-column: 4;">
+                            <div class="client-item">
+                                <div class="image">
+                                    <a target="_blank" href="https://www.versace.com/international/es/home/">
+                                    <img src="img/versace.png" alt="Versace">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                                        
+                        <!-- Quote -->                        
+                        <!-- title -->
+                        <div class="title" style="grid-column: 1 / 5;"><span class="first-word">C</span>ita</div>
+                        <!-- content -->                            
+                        <div class="text-box" style="grid-column: 1 / 5;">
+                            <div class="revs-item">
+                                <div class="text">
+                                    <div>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.							
+                                    </div>
+                                </div>
+                                <div class="user">
+                                    <div class="img">
+                                        <img src="/img/miniperfil.jpg" alt="Aymara Razo Romero">
+                                    </div>
+                                    <div class="info">
+                                        <div class="name">Aymara Razo Romero</div>
+                                        <div class="prof">Fotógrafa</div>
+                                    </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>                            
+                        <div class="clear"></div>                         
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    </div> 
+    <div class="clearfix"></div>
+    <!--footer-->
+    <div class="footer"></div>   
+</body>
+<script type="text/javascript" src="js/rotacionmenu.js"></script>
+<script type="text/javascript" src="js/acordeon.js"></script>
+<script type="text/javascript" src="js/show_hide.js"></script>
+<script type="text/javascript" src="js/count.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+</html>
+

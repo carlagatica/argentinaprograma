@@ -1,0 +1,64 @@
+@keyframes fondoanimado {
+    from {background-color: rgb(172, 135, 194);}
+    to {background-color: paleturquoise;}
+}
+
+@keyframes fadein {
+    from {opacity: 0; left:10%;}
+    to {opacity: 1; left:50%;}
+}
+
+@keyframes fadedown {
+    from {opacity: 0; top: 0%;}
+    to {opacity: 1; top:75%;}
+}
+
+@keyframes photoshop {
+    100%{
+        width: 93%;
+    }
+}
+@keyframes lightroom {
+    100%{
+        width: 85%;
+    }
+}
+@keyframes illustrator {
+    100%{
+        width: 75%;
+    }
+}
+@keyframes dxo {
+    100%{
+        width: 65%;
+    }
+}
+@keyframes vegas {
+    100%{
+        width: 68%;
+    }
+}
+@keyframes afterfx {
+    100%{
+        width: 59%;
+    }
+}
+@keyframes premiere {
+    100%{
+        width: 88%;
+    }
+}
+@keyframes esp {
+    100%{
+        stroke-dashoffset: 0;
+    }  
+}
+@keyframes ing {
+    100%{
+        stroke-dashoffset: 28;
+    }  
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
