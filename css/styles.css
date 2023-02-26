@@ -1122,9 +1122,9 @@ input[type=submit]:active {
         left: 5%;     
         animation: fadedown 1s forwards;
         display: none;
-        overflow-y: scroll;
+        overflow-y: hidden;
         z-index: 10;
-    }
+    } 
 }  
 /*esto es del portfolio*/
 @media only screen and (max-width: 700px){
